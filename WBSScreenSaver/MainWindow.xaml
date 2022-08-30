@@ -1,26 +1,4 @@
-﻿
-<!--
-    Copyright (c) 2015 Wm. Barrett Simms wbsimms.com
-    
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-    
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-    
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
--->
-<Window x:Class="WBSScreenSaver.MainWindow"
+﻿<Window x:Class="OLEDScreensaver.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow"
@@ -29,10 +7,22 @@
         MouseDown="Window_MouseDown"
         ResizeMode="NoResize"
         ShowInTaskbar="False"
-        WindowStyle="None">
+        WindowStyle="None" Topmost="True">
     <Grid x:Name="MainGrid">
-        <Image x:Name="logo"
-               Margin="331,233,370,234.667"
-               Source="WBS_200px-icon.png" />
+        <Image x:Name="logo" Margin="331,233,370,234.667" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Image.Source>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <DrawingGroup ClipGeometry="M0,0 V88 H88 V0 H0 Z">
+                            <GeometryDrawing Brush="#FF111111" Geometry="F1 M88,88z M0,0z M0,12.402L35.687,7.5418 35.7026,41.9648 0.0325999999999951,42.16793z M35.67,45.931L35.6977,80.384 0.0277000000000029,75.4799 0.0257000000000029,45.6999z M39.9961,6.90600000000001L87.3141,6.21724893790088E-15 87.3141,41.527 39.9961,41.90265z M87.3251,46.255L87.314,87.595 39.996,80.9166 39.9297,46.1776z" />
+                        </DrawingGroup>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Image.Source>
+        </Image>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Label x:Name="time" Content="00:00 AM" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#FF333333" Margin="0,0,64,104" FontSize="64" Height="96" FontFamily="Segoe UI Light"/>
+            <Label x:Name="date" Content="Monday, Junary 1 1970" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="#FF333333" Margin="0,0,64,64" FontSize="32" FontFamily="Segoe UI Light" Height="64"/>
+        </Grid>
     </Grid>
 </Window>

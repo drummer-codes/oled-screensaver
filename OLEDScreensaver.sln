@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WBSScreenSaver", "WBSScreenSaver\WBSScreenSaver.csproj", "{6DB136F5-14BD-43B2-AEC1-80B0657481EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OLEDScreensaver", "WBSScreenSaver\OLEDScreensaver.csproj", "{6DB136F5-14BD-43B2-AEC1-80B0657481EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F6F35F7-B91A-45C9-90ED-14E412FA4EB7}
 	EndGlobalSection
 EndGlobal
